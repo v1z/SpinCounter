@@ -1,0 +1,24 @@
+.page.page--result.hidden
+  .date-range
+    .date-range__ranges Set Date Range
+      ul.date-range__list
+        li.date-range__list-item(data-range='Today' onclick='room.setRange(this)') Today
+        li.date-range__list-item(data-range='Yesterday' onclick='room.setRange(this)') Yesterday
+        li.date-range__list-item(data-range='Last 7 days' onclick='room.setRange(this)') Last 7 days
+        li.date-range__list-item(data-range='This month' onclick='room.setRange(this)') This month
+        li.date-range__list-item(data-range='Last month' onclick='room.setRange(this)') Last month
+        li.date-range__list-item(data-range='This year' onclick='room.setRange(this)') This year
+        li.date-range__list-item(data-range='Last year' onclick='room.setRange(this)') Last year
+        li.date-range__list-item(data-range='All time' onclick='room.setRange(this)') All time
+    label.date-range__date-label(for="date-from") from
+    input.date-range__date-input(readonly type="text" id="date-from" name="date-from")
+    label.date-range__date-label(for="date-to") to (excluding)
+    input.date-range__date-input(readonly type="text" id="date-to" name="date-to")
+    a.date-range__btn#dateFilterBtn(onclick='room.filter()') Apply Filter
+  ul.limits#limits
+  table.results
+    thead#headers      
+    tbody#results      
+    tfoot#summaries
+  p.error-result.hidden There are no played tournaments in chosen date range
+      

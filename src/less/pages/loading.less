@@ -1,0 +1,37 @@
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0 50px;
+    width: 100vw;
+    height: 100vh;
+
+    &::before {
+        position: absolute;
+        top: 70px;
+        bottom: 50px;
+        left: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        background: @gray-f2;
+        content: '';
+    }
+
+    &__icon {
+        z-index: 200;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        z-index: 200;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 26px;
+    }
+}

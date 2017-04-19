@@ -1,0 +1,7 @@
+.page.page--upload#page--upload
+  form.upload-form(id="file-form")
+    label.upload-form__label Choose a directory to upload
+      svg.upload-form__icon(width="100", height="100")
+        use(xlink:href="#download")
+      input.upload-form__input(type="file" id="file-input" enctype="multipart/form-data" webkitdirectory directory multiple="multiple")
+    p.upload-form__error.hidden There are no valid files in chosen directory

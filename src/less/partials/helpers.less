@@ -1,0 +1,20 @@
+.uppercase {
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hoverLink() {
+    transition: opacity 0.4s;
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}

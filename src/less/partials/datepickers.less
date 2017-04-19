@@ -1,0 +1,135 @@
+.ui-corner-all {
+    border-radius: 0 !important;
+}
+
+.ui-helper-clearfix::before,
+.ui-helper-clearfix::after {
+    display: none;
+}
+
+.ui-datepicker td {
+    padding: 0;
+    border: 0 !important;
+}
+
+.ui-state-default {
+    border: 0 !important;
+    background: transparent !important;
+    color: @black !important;
+
+    &:hover {
+        background: @blue !important;
+        color: @white !important;
+        opacity: 0.7 !important;
+    }
+}
+
+.ui-state-highlight {
+    background: @blue !important;
+    color: @white !important;
+
+    &:hover {
+        opacity: 1 !important;
+    }
+}
+
+.ui-state-active {
+    background: @blue !important;
+    color: @white !important;
+    opacity: 0.7 !important;
+}
+
+.ui-priority-secondary {
+    opacity: 0.4 !important;
+}
+
+.ui-icon {
+    background-image: none !important;
+}
+
+.ui-datepicker-prev span {
+    margin-top: -12px !important;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/left-arrow.svg') !important;
+    background-position: 50% 50%;
+    background-size: cover !important;
+}
+
+.ui-datepicker-next span {
+    margin-top: -12px !important;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/right-arrow.svg') !important;
+    background-position: 50% 50%;
+    background-size: cover !important;
+}
+
+.ui-datepicker-prev-hover,
+.ui-datepicker-next-hover {
+    top: 2px !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.ui-datepicker-prev-hover {
+    left: 2px !important;
+}
+
+.ui-datepicker-next-hover {
+    right: 2px !important;
+}
+
+.ui-datepicker {
+    // border-bottom-left-radius: 10px !important;
+    // border-bottom-right-radius: 10px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    border: 2px solid @blue !important;
+    border-radius: 10px !important;
+    background: @blue !important;
+    font-family: 'Signika', 'Arial', sans-serif !important;
+}
+
+.ui-datepicker-calendar {
+    margin: 0 !important;
+    border: 0 !important;
+    background: @white !important;
+    font-size: 16px !important;
+
+    thead {
+        tr {
+            background: @blue !important;
+            color: @white !important;
+        }
+
+        th {
+            padding: 0 5px !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    tr {
+        border-top: 2px solid @blue;
+    }
+
+    td {
+        border-right: 1px solid @blue !important;
+
+        &:last-child {
+            border-right: 0 !important;
+        }
+    }
+}
+
+.ui-datepicker-header {
+    padding: 0 !important;
+    background: @blue !important;
+    color: @white !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+}
+
+.ui-widget-header {
+    border: 0 !important;
+}

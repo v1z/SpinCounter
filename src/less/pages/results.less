@@ -1,0 +1,215 @@
+.date-range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 900px;
+
+    &__btn {
+        display: inline-block;
+        padding: 0 30px;
+        border-radius: 10px;
+        background: @blue;
+        color: @white;
+        line-height: 31px;
+        transition: opacity 0.4s;
+
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+
+    &__date-input {
+        margin-right: 10px;
+        padding: 0;
+        width: 130px;
+        border: 2px solid @blue;
+        border-radius: 10px;
+        background: @gray-f2;
+        text-align: center;
+        font-size: 18px;
+        line-height: 27px;
+        transition: opacity 0.4s;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            background: @white;
+        }
+    }
+
+    &__date-label {
+        transition: opacity 0.4s;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__ranges {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        padding: 0 30px;
+        border-radius: 10px;
+        background: @blue;
+        color: @white;
+        line-height: 31px;
+        transition: opacity 0.4s;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--open {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            cursor: pointer;
+
+            ul {
+                visibility: visible;
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 31px;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        visibility: hidden;
+        flex-flow: column;
+        overflow: hidden;
+        width: 100%;
+        border: 2px solid @blue;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background: @white;
+        color: @black;
+        list-style: none;
+
+        &-item {
+            width: 100%;
+            border-bottom: 2px solid @blue;
+            text-align: center;
+            line-height: 1.6;
+            transition: color 0.4s, background-color 0.4s;
+
+            &:hover {
+                background: @blue--light;
+                color: @white;
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.error-result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    padding: 5px 30px;
+    border: 2px solid @red;
+    border-radius: 10px;
+    background: @white;
+    color: @red;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.limits {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 900px;
+    list-style: none;
+
+    &__item {
+        flex-grow: 1;
+        overflow: hidden;
+        border: 2px solid @blue;
+        border-right: none;
+
+        &--active {
+            background: @blue;
+
+            a {
+                color: @white;
+
+                &:hover {
+                    opacity: 1;
+                    cursor: default;
+                }
+            }
+        }
+
+        &:last-child {
+            border-right: 2px solid @blue;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        &:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        transition: all 0.4s;
+
+        &:hover {
+            background: @blue;
+            color: @white;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+}
+
+.results {
+    width: 900px;
+    border: 2px solid @blue;
+    border-collapse: collapse;
+    font-size: 20px;
+
+    &__cell,
+    &__header {
+        border: 1px solid @blue;
+    }
+
+    &__row {
+        border: 2px solid @blue;
+    }
+
+    &__cell {
+        vertical-align: middle;
+        text-align: center;
+        line-height: 1.4;
+
+        &--double {
+            padding: 3px 1px;
+            line-height: 2.8;
+        }
+
+        &--red {
+            color: @red;
+        }
+
+        &--green {
+            color: @green;
+        }
+    }
+}
