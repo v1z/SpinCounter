@@ -17,10 +17,15 @@ var gulp = require('gulp'),
     cmq = require('gulp-group-css-media-queries');
 
 // watch tasks
-gulp.task('less:watch', function() {
+gulp.task('less', function() {
     return gulp.src('src/less/styles.less')
       .pipe(less())
       .pipe(autoprefixer({browsers: ['last 2 versions', 'ie 10']}))
+      .pipe(cmq())
+      .pipe(csscomb())
+      .pipe(gulp.dest('build/css'))
+      .pipe(rename({suffix: '--min'}))
+      .pipe(csso())
       .pipe(gulp.dest('build/css'))
       .pipe(browserSync.reload({stream: true}))
 });
@@ -44,6 +49,12 @@ gulp.task('copy-fonts', function() {
       .pipe(browserSync.reload({stream: true}))
 });
 
+gulp.task('copy-data', function() {
+    return gulp.src('src/data/**/*.*', {base: 'src/data'})
+      .pipe(gulp.dest('build/data'))
+      .pipe(browserSync.reload({stream: true}))
+});
+
 gulp.task('copy-js', function() {
     return gulp.src('src/js/main.js', {base: 'src/js'})
       .pipe(rigger())
@@ -64,12 +75,13 @@ gulp.task('copy-css', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/less/**/*.less', ['less:watch']);
+    gulp.watch('src/less/**/*.less', ['less']);
     gulp.watch('src/jade/**/*.jade', ['jade']);
     gulp.watch('src/img/**/*', ['copy-img']);
     gulp.watch('src/fonts/**/*', ['copy-fonts']);
     gulp.watch('src/js/**/*', ['copy-js']);
     gulp.watch('src/css/**/*', ['copy-css']);
+    gulp.watch('src/data/**/*', ['copy-data']);
 });
 
 gulp.task('browserSync', function() {
@@ -82,19 +94,6 @@ gulp.task('browserSync', function() {
 
 gulp.task('default', ['watch', 'browserSync']);
 
-// build tasks
-gulp.task('less-build', function() {
-    return gulp.src('src/less/styles.less')
-      .pipe(less())
-      .pipe(autoprefixer({browsers: ['last 2 versions', 'ie 10']}))
-      .pipe(cmq())
-      .pipe(csscomb())
-      .pipe(gulp.dest('build/css'))
-      .pipe(rename({suffix: '--min'}))
-      .pipe(csso())
-      .pipe(gulp.dest('build/css'))
-});
-
 gulp.task('clean', function() {
     return gulp.src('build', {read: false})
       .pipe(clean())
@@ -102,5 +101,5 @@ gulp.task('clean', function() {
 
 gulp.task('build', function () {
     runSequence('clean',
-    ['less-build', 'jade', 'copy-css', 'copy-fonts', 'copy-js', 'copy-img'])
+    ['less', 'jade', 'copy-css', 'copy-fonts', 'copy-data', 'copy-js', 'copy-img'])
 });

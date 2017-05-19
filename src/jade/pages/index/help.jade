@@ -1,65 +1,65 @@
-.page.page--help.hidden
-  .help-content
-    h2.help-content__header Description
-    p.help-content__text-block.
++b('section').page.--help.hidden
+  +b.help-content
+    +e('h2').header Description
+    +e('p').text-block.
       Spin Counter is a web application for statistics calculation of Spin and Go tournaments on PokerStars.<br> 
       The application's main task is to calculate actual compartition of multipliers and 
       to compare calculated data to the probabilities, claimed by PokerStars. 
       This application uses txt files called 'Tournament Summaries'.
-    h2.help-content__header Requirements
-    ul.help-content__list
-      li.help-content__list-item You should have "Save My Tournament Summaries" function checked on your PokerStars client
-      li.help-content__list-item Language of saved files should be set to English
-      li.help-content__list-item If you use programs like Poker Tracker or Hold'em Manager, make sure that these programs save processed files and you know the saving directory
-    img.help-content__img(src='img/client.jpg' width='977' height='314' alt='Client setup')
-    h2.help-content__header Security
-    p.help-content__text-block.
+    +e('h2').header Requirements
+    +e('ul').list
+      +e('li').list-item You should have "Save My Tournament Summaries" function checked on your PokerStars client
+      +e('li').list-item Language of saved files should be set to English
+      +e('li').list-item If you use programs like Poker Tracker or Hold'em Manager, make sure that these programs save processed files and you know the saving directory
+    +e('img').img(src='img/client.jpg' width='977' height='314' alt='Client setup')
+    +e('h2').header Security
+    +e('p').text-block.
       All files are analyzed in browser so the application can perform well even without internet connection.
       The app doesn't send your information to any web servers. This approach ensures sufficient privacy of your personal data.<br>
       Previous version of the application (as a desktop app) has recieved a lot of positive
       feedback and taken place as a software tool among many players.
-    h2.help-content__header How To Use
-    p.help-content__text-block.
+    +e('h2').header How To Use
+    +e('p').text-block.
       First of all, you should click on the upload icon on the home page and choose the folder
-      which stores your Tournament Summary files. If there aren't any valid files,
+      which stores your Tournament Summary files (<a class="help-content__dwnload-link" href="data/test.rar">you can download test files here</a>). If there aren't any valid files,
       an error message will appear.
-    img.help-content__img(src='img/upload-error.jpg' width='426' height='47' alt='Upload error')
-    p.help-content__text-block.
+    +e('img').img(src='img/upload-error.jpg' width='426' height='47' alt='Upload error')
+    +e('p').text-block.
       After you chose the folder, files would be uploaded and proceeding will start. 
       The result table will appear after all the files will have been analyzed. To download other tournaments, you should go
       to the main page of the application, click again on the download icon and select another folder - new 
       results will be calculated (previous results will be lost).
-    img.help-content__img(src='img/results.jpg' width='910' height='394' alt='Result table')
-    p.help-content__text-block.
+    +e('img').img(src='img/results.jpg' width='910' height='394' alt='Result table')
+    +e('p').text-block.
       To view the results for the buy-in you need or for the total information - click 
       on the appropriate button.
-    img.help-content__img(src='img/limits.jpg' width='912' height='45' alt='Buy-ins')
-    p.help-content__text-block.
+    +e('img').img(src='img/limits.jpg' width='912' height='45' alt='Buy-ins')
+    +e('p').text-block.
       By using date filters at the top of the page, you can get results for the defined period of time.
-    img.help-content__img(src='img/dates.jpg' width='912' height='40' alt='Date filter')
-    p.help-content__text-block.
+    +e('img').img(src='img/dates.jpg' width='912' height='40' alt='Date filter')
+    +e('p').text-block.
       This filter allows you to choose preset date ranges (in that case filtration will proceed automatically) or manually set the 
       required period of time with calendars (in that case you should click 'Apply Filter' button). If there aren't played tournaments 
       in chosen date range, an error message will appear.
-    img.help-content__img(src='img/filter-error.jpg' width='532' height='50' alt='Filter error')
-    p.help-content__text-block.
+    +e('img').img(src='img/filter-error.jpg' width='532' height='50' alt='Filter error')
+    +e('p').text-block.
       The summary results for 'Expected' and 'Difference' of specific buy-ins are divided into two values: the first one includes 
       the possibility of getting top3 multipliers and the second one doesn't.<br>
       Summary results for 'Expected' are viewed as a sum of all tournaments prize pool expressed as buy-ins, while values for 
       multipliers are expressed as a quantity of tournaments.<br>
       Summary results for 'Difference' are shown as a percentage deviation of actual prize pool sum from expected (positive value - actual sum 
       is bigger than expected; negative value - lower than expected).
-    h2.help-content__header Feedback
-    p.help-content__text-block.
+    +e('h2').header Feedback
+    +e('p').text-block.
       If you have any questions or offers, do not hestitate to write them on the following forum threads. In case of finding any errors, 
       please write a report, covering as much details as possible. It will help us to find the most effective solution to your trouble.
-    h3.help-content__text-header Russian Language Forum Threads
-    .help-content__links-wrapper
-      a.help-content__link(href='http://forum.gipsyteam.ru/index.php?showtopic=100790' target='_blank')
+    +e('h3').text-header Russian Language Forum Threads
+    +e.links-wrapper
+      +e('a').link(href='http://forum.gipsyteam.ru/index.php?showtopic=100790' target='_blank')
         img(src='img/gt.png' width='260' height='73' alt='GipsyTeam')
-      a.help-content__link(href='http://ru.pokerstrategy.com/forum/thread.php?threadid=1057310' target='_blank')
+      +e('a').link(href='http://ru.pokerstrategy.com/forum/thread.php?threadid=1057310' target='_blank')
         img(src='img/strategy.png' width='296' height='36' alt='PokerStrategy')
-    h3.help-content__text-header English Language Forum Thread
-    .help-content__links-wrapper
-      a.help-content__link(href='http://pokerstrategy.com/forum/thread.php?threadid=349809' target='_blank')
+    +e('h3').text-header English Language Forum Thread
+    +e.links-wrapper
+      +e('a').link(href='http://pokerstrategy.com/forum/thread.php?threadid=349809' target='_blank')
         img(src='img/strategy.png' width='296' height='36' alt='PokerStrategy')

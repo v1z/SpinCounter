@@ -1,0 +1,9 @@
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://exltv1z.ru/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://exltv1z.ru/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://exltv1z.ru/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://exltv1z.ru/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="http://exltv1z.ru/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://exltv1z.ru/favicon-16x16.png" sizes="16x16" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="http://exltv1z.ru/mstile-144x144.png" />
