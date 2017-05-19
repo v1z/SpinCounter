@@ -448,6 +448,15 @@ footer {
     margin-bottom: 20px;
 }
 
+.help-content__dwnload-link {
+    color: #007aff;
+    transition: opacity 0.4s;
+}
+
+.help-content__dwnload-link:hover {
+    opacity: 0.7;
+}
+
 .help-content__text-header {
     margin-bottom: 10px;
     font-size: 22px;
